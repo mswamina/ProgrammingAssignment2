@@ -23,9 +23,9 @@ cacheSolve <- function(x) {
   }
   else {
     message("No cached data found. Calculating inverse matrix")
-    data <- x$get() # obtains matrix from object x
-    local_matrix <- solve(data) # finds inverse matrix
-    x$setImatrix(local_matrix) # assigns resulting inverse matrix to object x
+    data <- x$get() 
+    local_matrix <- solve(data) 
+    x$setImatrix(local_matrix) 
     message("Done.")
     return(local_matrix)
   }
